@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 if(process.env.MONGODB_URI) {
     mongoose.connect(process.env.MONGODB_URI)
 } else {
-    mongoose.connect('mongodb://localhost/idea-board')
+    mongoose.connect('mongodb://localhost/bog-app-one')
 }
 
 mongoose.connection.on('error', (err) => {
