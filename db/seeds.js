@@ -7,6 +7,7 @@ const saved = async () => {
     const sadie = new Creature({name: 'Sadie', description: 'pup'})
     await sadie.save()
     const emily = new Creature({name: 'Emily', description: 'sister' })
+    await emily.save()
 }
 
 saved()

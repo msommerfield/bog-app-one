@@ -1,7 +1,13 @@
 const express = require('express');
-const logger = require('mongoose')
+const logger = require('morgan')
 const app = express();
+const routes = require('./routes/index.js')
 
+app.use(logger('dev'))
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+
+app.use('/', routes)
 app.use(express.json());
 app.get('/', (req,res) => {
   res.send('Hello world!')
